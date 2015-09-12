@@ -74,13 +74,13 @@ listGate6.sort(key=itemgetter('timestamp'))
         
 for item in listGate1:
     #Parsing all the values
-    timestampUnix = int(item['timestamp'])-19800
+    timestampUnix = int(item['timestamp'])
     gateID = int(item['gateID'])
     count = int(item['outcount'])
     plotted = int(item['plotted'])
     
     #Get item for resetting plotted value
-    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix+19800)
+    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix)
     
     #Converting unix timestamp to human datetime
     timestampHuman = datetime.fromtimestamp(timestampUnix).strftime('%Y-%m-%d %H:%M:%S')
@@ -94,13 +94,13 @@ for item in listGate1:
     
 for item in listGate2:
     #Parsing all the values
-    timestampUnix = int(item['timestamp'])-19800
+    timestampUnix = int(item['timestamp'])
     gateID = int(item['gateID'])
     count = int(item['outcount'])
     plotted = int(item['plotted'])
     
     #Get item for resetting plotted value
-    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix+19800)
+    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix)
     
     #Converting unix timestamp to human datetime
     timestampHuman = datetime.fromtimestamp(timestampUnix).strftime('%Y-%m-%d %H:%M:%S')
@@ -114,13 +114,13 @@ for item in listGate2:
 
 for item in listGate3:
     #Parsing all the values
-    timestampUnix = int(item['timestamp'])-19800
+    timestampUnix = int(item['timestamp'])
     gateID = int(item['gateID'])
     count = int(item['outcount'])
     plotted = int(item['plotted'])
     
     #Get item for resetting plotted value
-    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix+19800)
+    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix)
     
     #Converting unix timestamp to human datetime
     timestampHuman = datetime.fromtimestamp(timestampUnix).strftime('%Y-%m-%d %H:%M:%S')
@@ -134,13 +134,13 @@ for item in listGate3:
 
 for item in listGate4:
     #Parsing all the values
-    timestampUnix = int(item['timestamp'])-19800
+    timestampUnix = int(item['timestamp'])
     gateID = int(item['gateID'])
     count = int(item['outcount'])
     plotted = int(item['plotted'])
     
     #Get item for resetting plotted value
-    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix+19800)
+    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix)
     
     #Converting unix timestamp to human datetime
     timestampHuman = datetime.fromtimestamp(timestampUnix).strftime('%Y-%m-%d %H:%M:%S')
@@ -174,13 +174,13 @@ for item in listGate5:
 
 for item in listGate6:
     #Parsing all the values
-    timestampUnix = int(item['timestamp'])-19800
+    timestampUnix = int(item['timestamp'])
     gateID = int(item['gateID'])
     count = int(item['outcount'])
     plotted = int(item['plotted'])
     
     #Get item for resetting plotted value
-    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix+19800)
+    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix)
     
     #Converting unix timestamp to human datetime
     timestampHuman = datetime.fromtimestamp(timestampUnix).strftime('%Y-%m-%d %H:%M:%S')
