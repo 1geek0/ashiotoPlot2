@@ -10,12 +10,12 @@ titleGate5 = "Gharpure Ghat";
 titleGate6 = "Panchavati Karanja";
 
 #Stream Tokens
-tokenGate1 = "htk2bjoxkx";
-tokenGate2 = "fclnf6jmj3";
-tokenGate3 = "etjtricdzb";
-tokenGate4 = "tlkv5dtp1s";
-tokenGate5 = "kjd23f0bsa";
-tokenGate6 = "y6m5f2c8xt";
+tokenGate1 = "fkn89m3iuc";
+tokenGate2 = "85d4f9g2ff";
+tokenGate3 = "kyavx2y466";
+tokenGate4 = "wdwvwxi7pv";
+tokenGate5 = "ysrav26msb";
+tokenGate6 = "otpgoj9u6o";
 tokenGates = [tokenGate1,tokenGate2,tokenGate3,tokenGate4,tokenGate5,tokenGate6];
 
 #Streams
@@ -36,7 +36,7 @@ traceGate6 = Scatter(x=[],y=[],stream=streamGate6,yaxis='y')
 
 
 #Layout
-name='Kumbh Mela Parvani 2'
+name='Kumbh Mela Parvani 3'
 layout = Layout(title=name)
 
 #Data

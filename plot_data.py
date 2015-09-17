@@ -10,12 +10,12 @@ ashiotoQuery = ashiotoTable.query_2(plotted__eq=0,index="plotted-index")
 
 #Plotly Initialization
 #Stream Tokens
-tokenGate1 = "htk2bjoxkx";
-tokenGate2 = "fclnf6jmj3";
-tokenGate3 = "etjtricdzb";
-tokenGate4 = "tlkv5dtp1s";
-tokenGate5 = "kjd23f0bsa";
-tokenGate6 = "y6m5f2c8xt";
+tokenGate1 = "fkn89m3iuc";
+tokenGate2 = "85d4f9g2ff";
+tokenGate3 = "kyavx2y466";
+tokenGate4 = "wdwvwxi7pv";
+tokenGate5 = "ysrav26msb";
+tokenGate6 = "otpgoj9u6o";
 #Setting up Streams
 streamGate1 = py.Stream(tokenGate1)
 streamGate2 = py.Stream(tokenGate2)
