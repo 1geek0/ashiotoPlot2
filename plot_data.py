@@ -6,30 +6,30 @@ from operator import itemgetter
 
 #DynamoDB Initialization
 ashiotoTable = Table('ashioto2')
-ashiotoQuery = ashiotoTable.query_2(plotted__eq=0,index="plotted-index")
+ashiotoQuery = ashiotoTable.query_2(timestamp__gt=1448284159,plotted__eq=0,index="plotted-timestamp-index")
 
 #Plotly Initialization
 #Stream Tokens
-tokenGate1 = "fkn89m3iuc";
-tokenGate2 = "85d4f9g2ff";
-tokenGate3 = "kyavx2y466";
+tokenGate1 = "xuua0p9vnr";
+tokenGate2 = "e6f22jh83j";
+'''tokenGate3 = "kyavx2y466";
 tokenGate4 = "wdwvwxi7pv";
 tokenGate5 = "ysrav26msb";
-tokenGate6 = "otpgoj9u6o";
+tokenGate6 = "otpgoj9u6o";'''
 #Setting up Streams
 streamGate1 = py.Stream(tokenGate1)
 streamGate2 = py.Stream(tokenGate2)
-streamGate3 = py.Stream(tokenGate3)
+'''streamGate3 = py.Stream(tokenGate3)
 streamGate4 = py.Stream(tokenGate4)
 streamGate5 = py.Stream(tokenGate5)
-streamGate6 = py.Stream(tokenGate6)
+streamGate6 = py.Stream(tokenGate6)'''
 #Opening Stream Gates
 streamGate1.open()
 streamGate2.open()
-streamGate3.open()
+'''streamGate3.open()
 streamGate4.open()
 streamGate5.open()
-streamGate6.open()
+streamGate6.open()'''
 
 #Gate Lists
 listGate1 = []
@@ -112,7 +112,7 @@ for item in listGate2:
     #Printing for debuging
     print("Plotted: " + str(count) + "\nTo: " + str(gateID) + "\nAt: " + str(timestampHuman) + "\n")
 
-for item in listGate3:
+'''for item in listGate3:
     #Parsing all the values
     timestampUnix = int(item['timestamp'])-19800
     gateID = int(item['gateID'])
@@ -160,7 +160,7 @@ for item in listGate5:
     plotted = int(item['plotted'])
     
     #Get item for resetting plotted value
-    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix+19800)
+    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix)
     
     #Converting unix timestamp to human datetime
     timestampHuman = datetime.fromtimestamp(timestampUnix).strftime('%Y-%m-%d %H:%M:%S')
@@ -174,13 +174,13 @@ for item in listGate5:
 
 for item in listGate6:
     #Parsing all the values
-    timestampUnix = int(item['timestamp'])-19800
+    timestampUnix = int(item['timestamp'])
     gateID = int(item['gateID'])
     count = int(item['outcount'])
     plotted = int(item['plotted'])
     
     #Get item for resetting plotted value
-    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix+19800)
+    plottedToSave = ashiotoTable.get_item(gateID=gateID,timestamp=timestampUnix)
     
     #Converting unix timestamp to human datetime
     timestampHuman = datetime.fromtimestamp(timestampUnix).strftime('%Y-%m-%d %H:%M:%S')
@@ -190,12 +190,12 @@ for item in listGate6:
     plottedToSave['plotted'] = 1
     plottedToSave.save()
     #Printing for debuging
-    print("Plotted: " + str(count) + "\nTo: " + str(gateID) + "\nAt: " + str(timestampHuman) + "\n")
+    print("Plotted: " + str(count) + "\nTo: " + str(gateID) + "\nAt: " + str(timestampHuman) + "\n")'''
 
 #Closing Plotly Streams
 streamGate1.close()
 streamGate2.close()
-streamGate3.close()
+'''streamGate3.close()
 streamGate4.close()
 streamGate5.close()
-streamGate6.close()
+streamGate6.close()'''
