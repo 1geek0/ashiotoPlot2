@@ -6,26 +6,26 @@ from operator import itemgetter
 
 #DynamoDB Initialization
 ashiotoTable = Table('ashioto2')
-ashiotoQuery = ashiotoTable.query_2(timestamp__gt=1448284159,plotted__eq=0,index="plotted-timestamp-index")
+ashiotoQuery = ashiotoTable.query_2(timestamp__gt=1448445510,plotted__eq=0,index="plotted-timestamp-index")
 
 #Plotly Initialization
 #Stream Tokens
-tokenGate1 = "xuua0p9vnr";
-tokenGate2 = "e6f22jh83j";
+tokenGate1 = "vyhq3kud1x";
+#tokenGate2 = "e6f22jh83j";
 '''tokenGate3 = "kyavx2y466";
 tokenGate4 = "wdwvwxi7pv";
 tokenGate5 = "ysrav26msb";
 tokenGate6 = "otpgoj9u6o";'''
 #Setting up Streams
 streamGate1 = py.Stream(tokenGate1)
-streamGate2 = py.Stream(tokenGate2)
+#streamGate2 = py.Stream(tokenGate2)
 '''streamGate3 = py.Stream(tokenGate3)
 streamGate4 = py.Stream(tokenGate4)
 streamGate5 = py.Stream(tokenGate5)
 streamGate6 = py.Stream(tokenGate6)'''
 #Opening Stream Gates
 streamGate1.open()
-streamGate2.open()
+#streamGate2.open()
 '''streamGate3.open()
 streamGate4.open()
 streamGate5.open()
@@ -92,7 +92,7 @@ for item in listGate1:
     #Printing for debuging
     print("Plotted: " + str(count) + "\nTo: " + str(gateID) + "\nAt: " + str(timestampHuman) + "\n")
     
-for item in listGate2:
+'''for item in listGate2:
     #Parsing all the values
     timestampUnix = int(item['timestamp'])-19800
     gateID = int(item['gateID'])
@@ -112,7 +112,7 @@ for item in listGate2:
     #Printing for debuging
     print("Plotted: " + str(count) + "\nTo: " + str(gateID) + "\nAt: " + str(timestampHuman) + "\n")
 
-'''for item in listGate3:
+for item in listGate3:
     #Parsing all the values
     timestampUnix = int(item['timestamp'])-19800
     gateID = int(item['gateID'])
@@ -194,7 +194,7 @@ for item in listGate6:
 
 #Closing Plotly Streams
 streamGate1.close()
-streamGate2.close()
+#streamGate2.close()
 '''streamGate3.close()
 streamGate4.close()
 streamGate5.close()
